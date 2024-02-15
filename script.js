@@ -8,8 +8,8 @@ function addTicket(ticket){
 function displayTickets(){
     const ticketList = document.getElementById('ticketList');
     ticketList.innerHTML = '';
-    tickets.forEach(ticket =>){
-        
-    }
+    tickets.forEach(ticket =>{
+        const li = document.createElement('li');
+    })
 
 }
