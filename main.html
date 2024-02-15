@@ -12,9 +12,11 @@
         Movie Ticket Booking
     </h1>
     <form id="ticketForm">
-        <label for="name">Film title:</label>
-        <input type="text" id="Title" required>
-        <button type="submit">Purchase Ticket</button>
+        <label for="filmTitle">Film Title:</label>
+        <input type="text" id="filmTitle" required>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" min="1" max="99">
+        <button type="submit">Purchase Ticket(s)</button>
     </form>
 
 <h2>Tickets</h2>
