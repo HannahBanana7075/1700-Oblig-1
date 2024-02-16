@@ -10,4 +10,15 @@ function validation(){
     let lastName = document.getElementById("lastName").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("email").value;
+    //do validation here
+
+
+
+    let ticket = {
+        amount: amount,
+        firstName: firstName, 
+        lastName: lastName, 
+        phoneNumber: phoneNumber, 
+        email: email
+    }
 }
