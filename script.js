@@ -39,7 +39,27 @@ function showTicketList(){
     `;
     myHTML.push(headers);
 
-
+    for (let i = 0; i< tickets.length; i++){
+        let row = `
+        <tr>
+        <td>
+        ${tickets[i].amount}
+        </td>
+        <td>
+        ${tickets[i].firstName}
+        </td>
+        <td>
+        ${tickets[i].lastName}
+        </td>
+        <td>
+        ${tickets[i].phoneNumber}
+        </td>
+        <td>
+        ${tickets[i].email}
+        </td>
+        </tr>
+        `
+    }
 
 
     let result = myHTML.join();
