@@ -1,7 +1,7 @@
 let tickets = [];
 
-function addTicket(){
-
+function addTicket(ticket){
+    tickets.push(ticket)
 }
 
 function validation(){
@@ -13,7 +13,6 @@ function validation(){
     //do validation here
 
 
-
     let ticket = {
         amount: amount,
         firstName: firstName, 
@@ -21,4 +20,6 @@ function validation(){
         phoneNumber: phoneNumber, 
         email: email
     }
+
+    addTicket(ticket)
 }
