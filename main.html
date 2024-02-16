@@ -11,7 +11,7 @@
     <h1>
         Movie Ticket Booking
     </h1>
-    <form id="ticketForm">
+    <form id="ticketForm"onsubmit="validation(); return false">
         <label for="movieSelection">Choose a movie:</label>
         <select id="movieSelection">
             <option value="movie1">Movie 1</option>
@@ -39,8 +39,10 @@
         <br>
 
         <br>
-        <button type="submit">Purchase Ticket(s)</button>
+        <button type="submit">Purchase Ticket(s)</button> <!---->
     </form>
+
+    <div id="allTickets"></div>
 
 <h2>Tickets</h2>
 <ul id="ticketList"></ul>
@@ -48,6 +50,11 @@
 <br>It's time to party!
 
 <script src="script.js"></script>
+<style>
+    th, td {
+        padding: 15px;
+    }
+</style>
 </body>
 </html>
 
