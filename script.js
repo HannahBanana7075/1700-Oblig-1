@@ -62,7 +62,11 @@ function showTicketList(){
         myHTML.push(row);
     }
 
-
     let result = myHTML.join(""); //empty quotes to prevent commas in the output.
     document.getElementById("allTickets").innerHTML= result;
 }
+
+function emptyList(){
+    tickets = [];
+    showTicketList();
+} //this function empties the list
