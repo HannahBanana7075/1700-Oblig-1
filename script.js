@@ -1,15 +1,13 @@
 let tickets = [];
 
-function addTicket(ticket){
-    tickets.push(ticket);
-    displayTickets();
+function addTicket(){
+
 }
 
-function displayTickets(){
-    const ticketList = document.getElementById('ticketList');
-    ticketList.innerHTML = '';
-    tickets.forEach(ticket =>{
-        const li = document.createElement('li');
-    })
-
+function validation(){
+    let amount = document.getElementById("amount").value;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let phoneNumber = document.getElementById("phoneNumber").value;
+    let email = document.getElementById("email").value;
 }
