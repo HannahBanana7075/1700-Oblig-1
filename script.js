@@ -27,7 +27,7 @@ function validation(){
 
 function showTicketList(){
     let myHTML = [];
-    let headers = `
+    let headers =`
     <table>
     <tr>
     <th>Amount</th>
@@ -40,7 +40,7 @@ function showTicketList(){
     myHTML.push(headers);
 
     for (let i = 0; i< tickets.length; i++){
-        let row = `
+        let row =`
         <tr>
         <td>
         ${tickets[i].amount}
@@ -58,10 +58,11 @@ function showTicketList(){
         ${tickets[i].email}
         </td>
         </tr>
-        `
+        `;
+        myHTML.push(row);
     }
 
 
-    let result = myHTML.join();
+    let result = myHTML.join(""); //empty quotes to prevent commas in the output.
     document.getElementById("allTickets").innerHTML= result;
 }
