@@ -12,7 +12,18 @@ function validation(){
     let lastName = document.getElementById("lastName").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("email").value;
+
+
+    if(phoneNumber.length!==8||phoneNumber.length!==10){
+
+    }
     //do validation here
+    //check phone number length is either 8 or 10, and consists of numbers
+    //check that  first and last name
+    //check that email has a @ and .domain 
+    //check that no fields are empty
+    //explain descisions
+    //add citations
 
     let ticket = {
         amount: amount,
@@ -21,11 +32,17 @@ function validation(){
         phoneNumber: phoneNumber, 
         email: email
     }
-
+    document.getElementById("amount").value= null;    //empties amount
     addTicket(ticket)
 }
 
 function showTicketList(){
+
+    if(tickets.length===0){
+        document.getElementById("allTickets").innerHTML = "There are no tickets. :)";
+        return;
+    }
+
     let myHTML = [];
     let headers =`
     <table>
