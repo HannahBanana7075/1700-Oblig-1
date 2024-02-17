@@ -7,12 +7,14 @@ function addTicket(ticket){
 
 function validation(){
     resetErrors();
+    let movie = document.getElementById("movieSelection").value;
     let amount = document.getElementById("amount").value;
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("email").value;
 
+    console.log();
     console.log(amount);
     console.log(firstName);
     console.log(lastName);
@@ -54,6 +56,7 @@ function validation(){
     //add citations
 
     let ticket = {
+        movie: movie,
         amount: amount,
         firstName: firstName, 
         lastName: lastName, 
@@ -75,6 +78,7 @@ function showTicketList(){
     let headers =`
     <table>
     <tr>
+    <th>Movie</th>
     <th>Amount</th>
     <th>First name</th>
     <th>Last name</th>
@@ -87,6 +91,9 @@ function showTicketList(){
     for (let i = 0; i< tickets.length; i++){
         let row =`
         <tr>
+        <td>
+        ${tickets[i].movie}
+        </td>
         <td>
         ${tickets[i].amount}
         </td>
