@@ -13,15 +13,27 @@ function validation(){
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("email").value;
 
+    console.log(amount);
+    console.log(firstName);
+    console.log(lastName);
+    console.log(phoneNumber);
+    console.log(email);
 
-    if(!(phoneNumber.length===8||phoneNumber.length===10)){
+
+   // function validatePhoneNumber(input_str) {
+    //    return re.test(input_str);
+    //} // source: https://www.abstractapi.com/guides/validate-phone-number-javascript
+    //if(!(phoneNumber.length===8||phoneNumber.length===10))
+    if(re.test(phoneNumber))
+    {
         document.getElementById("phoneNumberError").innerHTML= "Phone number must be valid.";
         return; //include return on all validations
     } //if statement validates phone number length
     
+    //check that  first and last name are valid
+
     //do validation here
-    //check phone number length is either 8 or 10, and consists of numbers
-    //check that  first and last name
+
     //check that email has a @ and .domain 
     //check that no fields are empty
     //explain descisions
