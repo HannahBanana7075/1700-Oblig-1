@@ -19,11 +19,17 @@ function validation(){
     console.log(phoneNumber);
     console.log(email);
     
-    let invalid = false;  //include return on all validations
-    if(firstName.length===0){
+
+    // lines 24 through 47 should never run due to HTML validation, but this is a good "second defence"
+    let invalid = false;
+    if(firstName.length===0)
+    {
+        document.getElementById("firstNameError").innerHTML= "Please enter a name.";
         invalid = true;
     }
-    if(lastName.length===0){
+    if(lastName.length===0)
+    {
+        document.getElementById("lastNameError").innerHTML= "Please enter a name.";
         invalid = true;
     }
     if(!(phoneNumber.length===8||phoneNumber.length===10))
@@ -31,12 +37,14 @@ function validation(){
         document.getElementById("phoneNumberError").innerHTML= "Phone number must be valid.";
         invalid = true 
     } //if statement validates phone number length
-    if(email.length===0){
+    if(email.length===0)
+    {
+        document.getElementById("emailError").innerHTML= "Please enter a valid E-Mail address.";
         invalid = true;
     }
     if(invalid){
         return;
-    } 
+    } //return prevents ticket from being added if fields are invalid.
 
     //check that  first and last name are valid
     //do validation here
@@ -52,7 +60,7 @@ function validation(){
         phoneNumber: phoneNumber, 
         email: email
     }
-    document.getElementById("amount").value= null;    //empties amount
+    document.getElementById("amount").value= null;    //empties amount to prevent double click.
     addTicket(ticket)
 }
 
