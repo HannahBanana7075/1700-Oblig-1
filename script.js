@@ -18,13 +18,26 @@ function validation(){
     console.log(lastName);
     console.log(phoneNumber);
     console.log(email);
-
+    
+    let invalid = false;  //include return on all validations
+    if(firstName.length===0){
+        invalid = true;
+    }
+    if(lastName.length===0){
+        invalid = true;
+    }
     if(!(phoneNumber.length===8||phoneNumber.length===10))
     {
         document.getElementById("phoneNumberError").innerHTML= "Phone number must be valid.";
-        return; //include return on all validations
+        invalid = true 
     } //if statement validates phone number length
-    
+    if(email.length===0){
+        invalid = true;
+    }
+    if(invalid){
+        return;
+    } 
+
     //check that  first and last name are valid
     //do validation here
     //check that email has a @ and .domain 
