@@ -33,14 +33,18 @@
         <br>    <br>
         <label for="phoneNumber" required>Phone number: </label>
         <input type="text" id="phoneNumber" minlength="8" maxlength="10"> <!--Remember Javascript validation for numbers and length-->
+        <label for="phoneNumber" id="phoneNumberError" style="color: red;"></label>
         <br>    <br>
         <label for="email">E-Mail: </label>
         <input type="text" id="email">
+        <label for="email" id="emailError" style="color: red;"></label>
         <br>
 
         <br>
         <button type="submit">Purchase Ticket(s)</button> <!---->
     </form>
+
+
 
     <div id="allTickets"></div>
 

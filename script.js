@@ -6,7 +6,7 @@ function addTicket(ticket){
 }
 
 function validation(){
-    console.log("I have been called");
+    resetErrors();
     let amount = document.getElementById("amount").value;
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -14,9 +14,11 @@ function validation(){
     let email = document.getElementById("email").value;
 
 
-    if(phoneNumber.length!==8||phoneNumber.length!==10){
-
-    }
+    if(!(phoneNumber.length===8||phoneNumber.length===10)){
+        document.getElementById("phoneNumberError").innerHTML= "Phone number must be valid.";
+        return; //include return on all validations
+    } //if statement validates phone number length
+    
     //do validation here
     //check phone number length is either 8 or 10, and consists of numbers
     //check that  first and last name
@@ -87,3 +89,8 @@ function emptyList(){
     tickets = [];
     showTicketList();
 } //this function empties the list
+
+function resetErrors(){
+    document.getElementById("phoneNumberError").innerHTML="";
+    //do this for all error messages
+} //this function resets error messages
