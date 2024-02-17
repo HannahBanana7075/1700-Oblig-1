@@ -20,31 +20,36 @@
             <option value="movie4">John Wick</option>
         </select>
         <br>    <br>
-        <label for="amount" style="width: 20%; float: left;">Amount:</label>
-        <input type="number" id="amount" min="1" max="99" required>
+            <label for="amount">Amount :</label>
+            <input type="number" id="amount" min="1" max="99" required>
         <br>
             
         <br>
-        <label for="firstName" style="width: 20%; float: left;" >First name: </label>
-        <input type="text" id="firstName" required>
-        <label for="firstName" id="firstNameError" style="color: red;"></label>
-        <br>    <br>
-        <label for="lastName" style="width: 20%; float: left;">Last name: </label>
-        <input type="text" id="lastName" required>
-        <label for="lastName" id="lastNameError" style="color: red;"></label>
-        <br>    <br>
-        <label for="phoneNumber" style="width: 20%; float: left;">Phone number: </label>
-        <input type="tel" id="phoneNumber" minlength="8" maxlength="10" pattern="[0-9]{3}[0-9]{2}[0-9]{3}" placeholder="12345678" required> 
-        <label for="phoneNumber" id="phoneNumberError" style="color: red;"></label><!--HTML validation prevents users fom inputing invalid data before js is called-->
-        <br>    <br>
-        <label for="email" style="width: 20%; float: left;">E-Mail: </label>
-        <input type="email" id="email" required>
-        <label for="email" id="emailError" style="color: red;"></label>
-        <br>
+        <div style="margin: 4px;">
+            <label for="firstName" style="width: 20%; float: left;"  >First name :</label>
+            <input type="text" id="firstName" required>
+            <label for="firstName" id="firstNameError" style="color: red;"></label>
+        </div>
+        <div style="margin: 4px;">
+            <label for="lastName" style="width: 20%; float: left;">Last name :</label>
+            <input type="text" id="lastName" required>
+            <label for="lastName" id="lastNameError" style="color: red;"></label>
+        </div>
+        <div style="margin: 4px;">
+            <label for="phoneNumber" style="width: 20%; float: left;">Phone number :</label>
+            <input type="tel" id="phoneNumber" minlength="8" maxlength="10" pattern="[0-9]{3}[0-9]{2}[0-9]{3}" placeholder="12345678" required> 
+            <label for="phoneNumber" id="phoneNumberError" style="color: red;"></label><!--HTML validation prevents users fom inputing invalid data before js is called-->
+        </div> 
+        <div style="margin: 4px;">
+            <label for="email" style="width: 20%; float: left;">E-Mail :</label>
+            <input type="email" id="email" required>
+            <label for="email" id="emailError" style="color: red;"></label>
+        </div>
+        <!--div divides content into sections-->
 
         <br>
-        <button type="submit">Purchase Ticket(s)</button> <!---->
-    </form>
+        <button type="submit">Purchase Ticket(s)</button> 
+    </form> <!--button activates js-->
 
 
 
