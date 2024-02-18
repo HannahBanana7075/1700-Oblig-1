@@ -4,7 +4,7 @@ OsloMet username: hasep9643
 
 GitHub username: HannahBanana7075
 
-GetHub REPO: https://github.com/HannahBanana7075/Cinema-Booking.git
+GetHub REPO: https://github.com/HannahBanana7075/1700-Oblig-1.git
 
 Full Name: Hannah Leigh Sepanak
 
