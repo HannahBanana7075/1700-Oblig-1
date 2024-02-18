@@ -2,16 +2,21 @@
 <html lang = "en">
 <head>
     <meta charset="UTF-8">
+    <!---UTF-8 encoding allows proper text rendering-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport allows for scalability-->
     <title>
     Movie Ticket Booking
     </title>
 </head>
 <body>
-    <h1>
+
+    <h1> <!--Main header shows purpose of the page-->
         Movie Ticket Booking
-    </h1> <!--Main header shows purpose of the page-->
+    </h1> 
+
     <form id="ticketForm"onsubmit="validation(); return false"> 
+        <!--form allows users to select a movie, input data, and purchase tickets-->
         <label for="movieSelection">Choose a movie:</label>
         <select id="movieSelection">
             <!--drop down menu with the following options-->
@@ -24,10 +29,12 @@
         <br>    <br>
             <label for="amount">Amount :</label>
             <input type="number" id="amount" min="1" max="99" required>
-        <br>
+        <br> <!--min and max allows a range for users to chose from 1 to 99 tickets-->
             
         <br>
-        <div style="margin: 4px;">
+        <!--input fields to allow users to provide personal data-->
+        <!--div divides content into sections-->
+        <div style="margin: 4px;"> <!--margin spaces the divs to be 4 pixels appart-->
             <label for="firstName" style="width: 20%; float: left;"  >First name :</label>
             <input type="text" id="firstName" required>
             <label for="firstName" id="firstNameError" style="color: red;"></label>
@@ -39,37 +46,41 @@
         </div>
         <div style="margin: 4px;">
             <label for="phoneNumber" style="width: 20%; float: left;">Phone number :</label>
-            <input type="tel" id="phoneNumber" minlength="8" maxlength="10" pattern="[0-9]{3}[0-9]{2}[0-9]{3}" placeholder="12345678" required> 
-            <label for="phoneNumber" id="phoneNumberError" style="color: red;"></label><!--HTML validation prevents users fom inputing invalid data before js is called-->
+            <input type="tel" id="phoneNumber" minlength="8" maxlength="10" pattern="[0-9]{3}[0-9]{2}[0-9]{3}" placeholder="12345678" required>
+            <!--input type "tel" for telephone number validation--> 
+            <!--Source: https://www.w3schools.com/tags/att_input_type_tel.asp-->
+            <label for="phoneNumber" id="phoneNumberError" style="color: red;"></label>
+            <!--HTML validation prevents users fom inputing invalid data before js is called-->
         </div> 
         <div style="margin: 4px;">
             <label for="email" style="width: 20%; float: left;">E-Mail :</label>
             <input type="email" id="email" required>
+            <!--input type "email" allows for HTML validation-->
             <label for="email" id="emailError" style="color: red;"></label>
         </div>
-        <!--div divides content into sections-->
+        
 
         <br>
         <button type="submit">Purchase Ticket(s)</button> 
     </form> <!--button activates js-->
 
-
-
     <div id="allTickets"></div>
 
 <h2>Tickets</h2>
+
 <ul id="ticketList"></ul>
 <button id="deleteTickets" onclick="emptyList()">Delete Tickets</button>
+<!--Deletes all tickets-->
 <br>
-<!--It's time to party!-->
 
-<script src="script.js"></script>
+<script src="script.js"></script><!--references and loads JavaScript file-->
+
 <style>
     th, td {
         padding: 15px;
     }
-</style>
+</style> 
 </body>
 </html>
 
-<!--ADD COMMENTS-->
+<!--REMEMBER TO ADD COMMENTS-->
