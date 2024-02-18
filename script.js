@@ -1,9 +1,9 @@
-let tickets = [];
+let tickets = []; //creates a string for tickets
 
 function addTicket(ticket){
     tickets.push(ticket);
     showTicketList();
-}
+} // creates a function to add "ticket" (singular) to "tickets" (plural) string
 
 function validation(){
     resetErrors();
@@ -14,6 +14,7 @@ function validation(){
     let phoneNumber = document.getElementById("phoneNumber").value;
     let email = document.getElementById("email").value;
 
+
     console.log();
     console.log(amount);
     console.log(firstName);
@@ -22,7 +23,7 @@ function validation(){
     console.log(email);
     
 
-    // lines 24 through 47 should never run due to HTML validation, but this is a good "second defence"
+    // lines 27 through 50 should never run due to HTML validation, but this is a good "second defence" to prevent invalid user input.
     let invalid = false;
     if(firstName.length===0)
     {
@@ -48,12 +49,13 @@ function validation(){
         return;
     } //return prevents ticket from being added if fields are invalid.
 
+    //Remember to:
     //check that  first and last name are valid
     //do validation here
     //check that email has a @ and .domain 
     //check that no fields are empty
     //explain descisions
-    //add citations
+    //add citations if needed
 
     let ticket = {
         movie: movie,
@@ -63,7 +65,7 @@ function validation(){
         phoneNumber: phoneNumber, 
         email: email
     }
-    document.getElementById("amount").value= null;    //empties amount to prevent double click.
+    document.getElementById("amount").value= null;    //empties "amount" to prevent double click.
     addTicket(ticket)
 }
 
@@ -72,7 +74,7 @@ function showTicketList(){
     if(tickets.length===0){
         document.getElementById("allTickets").innerHTML = "There are no tickets. :)";
         return;
-    }
+    } //adds a message if there are no tickets
 
     let myHTML = [];
     let headers =`
@@ -85,15 +87,15 @@ function showTicketList(){
     <th>Phone number</th>
     <th>E-Mail</th>
     </tr>
-    `;
+    `; //adds headers to "tickets" list
     myHTML.push(headers);
 
     for (let i = 0; i< tickets.length; i++){
         let row =`
-        <tr>
+        <tr> 
         <td>
         ${tickets[i].movie}
-        </td>
+        </td> 
         <td>
         ${tickets[i].amount}
         </td>
@@ -110,7 +112,7 @@ function showTicketList(){
         ${tickets[i].email}
         </td>
         </tr>
-        `;
+        `; //tr(table row) td(table data). each td displays input data under coorelating header.
         myHTML.push(row);
     }
 
@@ -125,5 +127,4 @@ function emptyList(){
 
 function resetErrors(){
     document.getElementById("phoneNumberError").innerHTML="";
-    //do this for all error messages
 } //this function resets error messages
